@@ -1,0 +1,175 @@
+.tour-dates {
+  position: relative;
+  width: 100%;
+  padding: 150px 50px;
+  color: rgb(225, 225, 225);
+}
+.tour-dates-title {
+  display: flex;
+  align-items: center;
+  max-width: 1300px;
+  margin: 100px auto;
+}
+.tour-dates h1 {
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(55, 55, 55);
+  font-size: 36px;
+  margin: 0 25px;
+}
+
+.tour-dates-title .title-line {
+  height: 2px;
+  flex-grow: 1;
+  background-color: rgb(179, 179, 179);
+}
+
+.no-events-wrapper {
+  border: 2px solid rgba(79, 57, 54, 0.25);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.no-events {
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(225, 225, 225);
+  background: rgba(79, 57, 54, 0.75);
+  padding: 50px;
+  font-size: 18px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.events-wrapper {
+  border: 2px solid rgba(79, 57, 54, 0.25);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 25px;
+}
+.events {
+  width: 100%;
+
+  padding: 50px;
+  margin: 0 auto;
+  background: rgba(79, 57, 54, 0.75);
+}
+.event {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid rgba(225, 225, 225, 0.632);
+}
+
+.event .show-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(225, 225, 225);
+  padding: 15px;
+  width: 100px;
+  height: 100px;
+  min-width: 150px;
+}
+.event .show-date .date {
+  font-size: 32px;
+}
+
+.scale-wrapper {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 25px;
+  height: 100px;
+}
+
+.event span {
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+}
+.event a {
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+  padding: 10px 25px;
+  color: rgb(225, 225, 225);
+  border: 2px solid rgb(225, 225, 225);
+}
+.event a:hover {
+  background-color: rgb(225, 225, 225);
+  color: rgba(79, 57, 54, 0.75);
+}
+
+.place {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.place .location {
+  color: rgb(165, 165, 165);
+}
+
+.tour-dates .decor {
+  position: absolute;
+  opacity: 0.75;
+  top: 0;
+  left: 50px;
+  height: 150px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .events {
+    padding: 15px;
+  }
+  .event .show-date {
+    width: 150px;
+    height: 150px;
+  }
+
+  .event span {
+    font-size: 16px;
+  }
+  .event a {
+    font-size: 16px;
+    padding: 7px 20px;
+    width: 150px;
+    text-align: center;
+  }
+  .scale-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 150px;
+  }
+  .events-wrapper {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .event {
+    align-items: flex-end;
+  }
+  .tour-dates {
+    padding: 150px 15px;
+  }
+  .tour-dates .decor {
+    left: 15px;
+  }
+  .event .show-date {
+    width: 100px;
+
+    min-width: 100px;
+  }
+  .scale-wrapper {
+    height: auto;
+  }
+  .event a {
+    margin-top: 15px;
+  }
+}

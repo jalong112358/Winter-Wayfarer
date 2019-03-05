@@ -1,0 +1,71 @@
+.toggle-button {
+  position: relative;
+
+  height: 20px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button-line {
+  position: absolute;
+  height: 2px;
+  background-color: rgb(217, 217, 217);
+}
+
+.toggle-button-line:nth-child(1) {
+  top: 0;
+  width: 30px;
+  transition: all 200ms ease;
+}
+
+.toggle-button-line:nth-child(2) {
+  top: 9px;
+  width: 30px;
+  transition: all 200ms ease;
+}
+
+.toggle-button-line:nth-child(3) {
+  bottom: 0;
+  width: 30px;
+  transition: all 200ms ease;
+}
+
+.toggle-button:hover .toggle-button-line {
+  width: 30px;
+  transition: all 200ms ease;
+}
+
+.toggle-button-line:nth-child(2).change {
+  opacity: 0;
+  transition: all 200ms ease;
+}
+
+.toggle-button-line:nth-child(1).change {
+  width: 30px;
+  transform: rotate(45deg);
+  top: 9px;
+  transition: all 200ms ease;
+}
+
+.toggle-button-line:nth-child(3).change {
+  width: 30px;
+  transform: rotate(-45deg);
+  bottom: 9px;
+  transition: all 200ms ease;
+}
+
+.toggle-button:hover .toggle-button-line:nth-child(1).change {
+  transform: rotate(0);
+  transition: all 200ms ease;
+}
+.toggle-button:hover .toggle-button-line:nth-child(3).change {
+  transform: rotate(0);
+  transition: all 200ms ease;
+}

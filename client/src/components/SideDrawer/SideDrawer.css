@@ -1,0 +1,56 @@
+.side-drawer {
+  height: 100vh;
+  padding: 0 50px;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  width: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  transform: translateX(-100%);
+  transition: opacity 0.25s ease-in-out;
+}
+
+.side-drawer.open {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.25s ease-in-out;
+}
+
+.side-drawer ul {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-top: none;
+  padding-bottom: 65px;
+}
+
+.side-drawer ul li {
+  width: 100%;
+  padding: 15px;
+}
+
+.side-drawer ul .link {
+  font-family: "Roboto Mono", monospace;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: rgb(217, 217, 217);
+  text-decoration: none;
+  font-size: 32px;
+
+  padding: 0 15px;
+  padding-bottom: 7px;
+}
+
+.side-drawer ul .link:hover {
+  cursor: pointer;
+  color: rgb(181, 86, 86);
+}
