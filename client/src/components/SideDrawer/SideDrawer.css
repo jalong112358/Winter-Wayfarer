@@ -33,7 +33,7 @@
 
 .side-drawer ul li {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
 }
 
 .side-drawer ul .link {
@@ -44,9 +44,6 @@
   color: rgb(217, 217, 217);
   text-decoration: none;
   font-size: 32px;
-
-  padding: 0 15px;
-  padding-bottom: 7px;
 }
 
 .side-drawer ul .link:hover {

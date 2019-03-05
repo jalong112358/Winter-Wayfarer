@@ -61,11 +61,14 @@
   transition: all 200ms ease;
 }
 
-.toggle-button:hover .toggle-button-line:nth-child(1).change {
-  transform: rotate(0);
-  transition: all 200ms ease;
-}
-.toggle-button:hover .toggle-button-line:nth-child(3).change {
-  transform: rotate(0);
-  transition: all 200ms ease;
+@media (pointer: fine) {
+  /* Primary Input is a fine pointer device such as a mouse or stylus */
+  .toggle-button:hover .toggle-button-line:nth-child(1).change {
+    transform: rotate(0);
+    transition: all 200ms ease;
+  }
+  .toggle-button:hover .toggle-button-line:nth-child(3).change {
+    transform: rotate(0);
+    transition: all 200ms ease;
+  }
 }
