@@ -28,17 +28,9 @@ export default function Music() {
               struggles.
             </span>
           </p>
-          <div className="album-links">
-            <a href="#">
-              <img src={itunesIcon} />
-            </a>
-            <a href="#">
-              <img src={spotifyIcon} />
-            </a>
-            <a href="https://winterwayfarer.bandcamp.com/album/keep-close">
-              Buy the CD
-            </a>
-          </div>
+          <br />
+          <br />
+
           <p>
             Released October 18, 2017
             <br />
@@ -66,6 +58,18 @@ export default function Music() {
             Max Foster: Cello <br />
             <br />© all rights reserved
           </p>
+          <br />
+          <div className="album-links">
+            <a href="https://itunes.apple.com/us/album/keep-close/1298876488">
+              <img src={itunesIcon} />
+            </a>
+            <a href="https://open.spotify.com/artist/4LEK3FCSRNV0FEbL75DTS0?si=UDN9lpc5R_a81tYgokT8MQ">
+              <img src={spotifyIcon} />
+            </a>
+            <a href="https://winterwayfarer.bandcamp.com/album/keep-close">
+              Buy the CD
+            </a>
+          </div>
         </div>
       </div>
       <img className="decor" src={decor} />
