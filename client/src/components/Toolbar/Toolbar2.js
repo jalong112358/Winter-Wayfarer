@@ -5,7 +5,7 @@ import "./Toolbar2.css";
 const Toolbar2 = props => {
   let classes = "toolbar2";
 
-  if (props.scrollPos > 200) {
+  if (props.scrollPos > 150) {
     classes = "toolbar2 open";
   }
 

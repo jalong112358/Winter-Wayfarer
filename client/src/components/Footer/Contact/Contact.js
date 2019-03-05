@@ -114,7 +114,7 @@ class Contact extends Component {
             </div>
           ) : null}
           {this.state.success ? (
-            <span className="message-sent">Message sent. Thank you!</span>
+            <span className="message-sent">Message sent.</span>
           ) : this.state.serverErr ? (
             <span className="server-error">Server Error</span>
           ) : null}

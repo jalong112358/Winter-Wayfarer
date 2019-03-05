@@ -30,15 +30,15 @@ class About extends Component {
   render() {
     const elementPos = this.state.elementPos * -1;
 
-    const newHeaderPos = 100 + elementPos * 0.15;
-    const newBodyPos = -25 + elementPos * 0.25;
+    const newHeaderPos = 500 + elementPos * 0.45;
+    const newBodyPos = -100 + elementPos * 0.25;
 
     return (
       <div
         className="about"
         style={{ backgroundImage: "url(" + aboutBg + ")" }}
       >
-        <h1 style={{ top: newHeaderPos }}>ABOUT US</h1>
+        <h1 style={{ bottom: newHeaderPos }}>ABOUT US</h1>
         <p style={{ bottom: newBodyPos }}>
           Winter Wayfarer is a solo project by Collin Hop. Through the story
           that drives this conceptual series of music, I hope to be able to
