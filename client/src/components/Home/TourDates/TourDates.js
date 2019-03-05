@@ -11,9 +11,7 @@ export default class TourDates extends Component {
       tourDates: []
     };
 
-    fetch(
-      "https://rest.bandsintown.com/artists/Winter%20Wayfarer/events?app_id=Test"
-    )
+    fetch("https://rest.bandsintown.com/artists/Kip%20Moore/events?app_id=Test")
       .then(response => response.json())
       .then(tourDates => this.setState({ tourDates: tourDates }));
   }

@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import "./SideDrawer.css";
 
 const SideDrawer = props => {
@@ -40,6 +33,7 @@ const SideDrawer = props => {
             spy={true}
             smooth={true}
             duration={500}
+            offset={50}
           >
             Music
           </Link>
@@ -95,6 +89,7 @@ const SideDrawer = props => {
             spy={true}
             smooth={true}
             duration={500}
+            offset={-75}
           >
             Contact Us
           </Link>

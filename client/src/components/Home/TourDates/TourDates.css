@@ -172,4 +172,10 @@
   .event a {
     margin-top: 15px;
   }
+  .no-events-wrapper {
+    padding: 15px;
+  }
+  .events-wrapper {
+    padding: 15px;
+  }
 }
