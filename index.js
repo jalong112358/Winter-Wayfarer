@@ -17,17 +17,16 @@ app.post("/api/form", (req, res) => {
     return res.json([errors, false, false]);
   } else {
     let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
+      service: "gmail",
+      secure: false,
 
       auth: {
-        type: "OAuth2",
-        user: local_settings.my_gmail_username,
-        clientId: local_settings.my_oauth_client_id,
-        clientSecret: local_settings.my_oauth_client_secret,
-        refreshToken: local_settings.my_oauth_refresh_token,
-        accessToken: local_settings.my_oauth_access_token
+        type: "oauth2",
+        user: secrets.email,
+        clientId:
+          "426085395496-0hu3iukkh0jmspeotilviktcobhjkbn9.apps.googleusercontent.com",
+        clientSecret: "Fy19K5H9hZMMwyuIm6twyvjT",
+        refreshToken: "1/lJASWjCOtCT497P9TaukuIsETA-_bsqe7I1nl6t6fVk"
       }
     });
 
