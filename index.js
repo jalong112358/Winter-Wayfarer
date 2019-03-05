@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-// const secrets = require("./config/secrets");
+const secrets = require("./config/secrets");
 const path = require("path");
 const app = express();
 
@@ -21,8 +21,8 @@ app.post("/api/form", (req, res) => {
       secure: false,
 
       auth: {
-        user: "jake.long112358@gmail.com",
-        pass: "Canonball3"
+        user: secrets.email,
+        pass: secrets.emailPassword
       }
     });
 
@@ -39,7 +39,7 @@ app.post("/api/form", (req, res) => {
 
     let mailOptions = {
       from: req.body.email,
-      to: "jake.long112358@gmail.com",
+      to: secrets.email,
       replyTo: req.body.email,
       subject: req.body.message,
       text: req.body.message,
