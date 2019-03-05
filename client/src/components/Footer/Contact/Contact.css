@@ -100,6 +100,10 @@
   color: rgb(79, 146, 79);
   font-family: "Roboto Mono", monospace;
 }
+.contact span.server-error {
+  color: rgb(146, 79, 79);
+  font-family: "Roboto Mono", monospace;
+}
 
 .spinner {
   display: inline-flex;

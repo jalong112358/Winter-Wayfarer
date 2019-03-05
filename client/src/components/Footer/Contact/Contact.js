@@ -19,7 +19,8 @@ class Contact extends Component {
     message: "",
     errors: {},
     success: false,
-    sending: false
+    sending: false,
+    serverErr: false
   };
 
   handleChange = e => {
@@ -42,7 +43,8 @@ class Contact extends Component {
         this.setState({
           errors: response.data[0],
           success: response.data[1],
-          sending: response.data[1]
+          sending: response.data[1],
+          serverErr: response.data[2]
         })
       )
       .catch(e => console.log(e));
@@ -113,6 +115,8 @@ class Contact extends Component {
           ) : null}
           {this.state.success ? (
             <span className="message-sent">Message sent. Thank you!</span>
+          ) : this.state.serverErr ? (
+            <span className="server-error">Server Error</span>
           ) : null}
         </form>
       </Element>
