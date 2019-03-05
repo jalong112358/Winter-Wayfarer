@@ -37,14 +37,14 @@
 }
 
 .contact input.error {
-  border-bottom: 1px solid rgb(194, 87, 87);
-  color: rgb(194, 87, 87);
+  border-bottom: 1px solid rgb(146, 79, 79);
+  color: rgb(146, 79, 79);
 }
 
 .error-message {
   font-family: "Roboto Mono", monospace;
   display: block;
-  color: rgb(194, 87, 87);
+  color: rgb(146, 79, 79);
 }
 
 .contact-name {
@@ -76,8 +76,8 @@
 }
 
 .contact-message.error {
-  border-bottom: 1px solid rgb(194, 87, 87);
-  color: rgb(194, 87, 87);
+  border-bottom: 1px solid rgb(146, 79, 79);
+  color: rgb(146, 79, 79);
 }
 
 .contact button {
@@ -92,8 +92,8 @@
 }
 
 .contact button:hover {
-  color: rgb(194, 87, 87);
-  border: 1px solid rgb(194, 87, 87);
+  color: rgb(146, 79, 79);
+  border: 1px solid rgb(146, 79, 79);
 }
 
 .contact span.message-sent {
