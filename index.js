@@ -17,12 +17,17 @@ app.post("/api/form", (req, res) => {
     return res.json([errors, false, false]);
   } else {
     let transporter = nodemailer.createTransport({
-      service: "gmail",
-      secure: false,
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
 
       auth: {
-        user: secrets.email,
-        pass: secrets.emailPassword
+        type: "OAuth2",
+        user: local_settings.my_gmail_username,
+        clientId: local_settings.my_oauth_client_id,
+        clientSecret: local_settings.my_oauth_client_secret,
+        refreshToken: local_settings.my_oauth_refresh_token,
+        accessToken: local_settings.my_oauth_access_token
       }
     });
 
