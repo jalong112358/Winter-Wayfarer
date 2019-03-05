@@ -9,7 +9,6 @@ import {
   scroller
 } from "react-scroll";
 import "./Contact.css";
-import axios from "axios";
 
 class Contact extends Component {
   state = {
