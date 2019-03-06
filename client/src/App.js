@@ -18,7 +18,8 @@ class App extends Component {
   state = {
     sideDrawerOpen: false,
     scrollPos: 0,
-    loading: true
+    loading: true,
+    windowWidth: 0
   };
 
   drawerToggleHandler = () => {
@@ -39,14 +40,24 @@ class App extends Component {
     }, 25);
   };
 
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({ windowWidth: window.innerWidth });
+  };
+
   componentDidMount() {
     demoAsyncCall().then(() => this.setState({ loading: false }));
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
     this.getScrollPos();
   }
 
   render() {
     const { loading } = this.state;
-
+    console.log(this.state.windowWidth);
     if (loading) {
       // if your component doesn't have to wait for an async action, remove this block
       return null; // render null when app is not ready
@@ -71,9 +82,15 @@ class App extends Component {
           show={this.state.sideDrawerOpen}
         />
         <main>
-          <Landing scrollPos={this.state.scrollPos} />
+          <Landing
+            scrollPos={this.state.scrollPos}
+            windowWidth={this.state.windowWidth}
+          />
           <Music />
-          <About scrollPos={this.state.scrollPos} />
+          <About
+            scrollPos={this.state.scrollPos}
+            windowWidth={this.state.windowWidth}
+          />
           <TourDates />
           <Merch />
           <Footer />

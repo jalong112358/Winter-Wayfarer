@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import aboutBgSmall from "../../../images/about-bg-small.jpg";
 import aboutBg from "../../../images/about-bg.jpg";
 import ReactDOM from "react-dom";
 
@@ -7,8 +8,21 @@ import "./About.css";
 class About extends Component {
   state = {
     elementPos: null,
-    posFromTop: 0
+    posFromTop: 0,
+    landingImage: ""
   };
+
+  componentWillReceiveProps() {
+    if (this.props.windowWidth < 800) {
+      this.setState({
+        landingImage: aboutBgSmall
+      });
+    } else {
+      this.setState({
+        landingImage: aboutBg
+      });
+    }
+  }
 
   parallaxLoop = () => {
     setInterval(() => {
@@ -36,7 +50,7 @@ class About extends Component {
     return (
       <div
         className="about"
-        style={{ backgroundImage: "url(" + aboutBg + ")" }}
+        style={{ backgroundImage: "url(" + this.state.landingImage + ")" }}
       >
         <h1 style={{ bottom: newHeaderPos }}>ABOUT US</h1>
         <p style={{ bottom: newBodyPos }}>
